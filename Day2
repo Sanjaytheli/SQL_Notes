@@ -1,0 +1,39 @@
+what is sql 
+================================
+   To connect with Database systems or to cummunicate with data system we are going to use a language is "SQL"
+
+Types of the commands in SQL
+==============================
+1. Data Defination language [DDL]
+2. Data Manupulate language [DML]
+3. Data Retrieval language [DRL]
+4. Data control Language [DCL]
+5. Transational Control Language [TCL]
+
+
+DDL:
+==========
+  If you Want to perform kind of operation On structure of the table 
+1. Tablename
+2. Column names 
+3. Datatypes of the columns
+4. Datatype lenght of the columns
+5. Constraints of the table 
+
+what king of operations we can perform on the structure :
+1. Define the structure : CREATE 
+2. Modifying the structure : ALTER
+3. removing the structure : DROP
+
+DML :
+==============
+   if you want to perform any kind of operations on data in the table 
+what kind of operations  we can perform on the DATA :
+  1.Define the Data :INSERT 
+  2.modifying the Data : UPDATE 
+  3.Remove the Data:  DELETE
+
+
+
+
+
