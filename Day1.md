@@ -1,67 +1,114 @@
-# SQL & Database Fundamentals (Day 1)
+GCP Engineering Sql Day 1
+====================================
 
----
+what is the importance of the database for cloud data engineer?
 
-## 1. Core Concepts
+As a Cloud Data engineer every day we are going to deal with "DATA"
 
-* **SQL (Structured Query Language)**: The standard language used to talk to databases, fetch data, and manage tables.
-* **DBMS (Database Management System)**: The overall concept/system for storing and managing digital data.
-* **RDBMS (Relational Database Management System)**: A system based on a set of rules (introduced around 1970) to manage data stored in connected tables.
-* **Database Software**: Real-world software tools built on RDBMS rules (e.g., MySQL, Oracle, PostgreSQL, DB2).
+Where this Data will present ? --> database / servers
 
----
+.txt files
+.xml files
+.json files
+.csv files 
+.parquet files
+.avro files
+.sequence files 
 
-## 2. Table Structure
+All about files will act as source files and target files 
+but most of the times these files will act as source files
 
-A **Table** is a collection of rows and columns. A single box/cell inside a table is called a **Value**.
 
-| Database Term | Also Known As | What It Means |
-| :--- | :--- | :--- |
-| **Column** | Attribute / Field | Vertical category (e.g., `Name`, `Age`) |
-| **Row** | Tuple / Record | Horizontal entry (e.g., one student's full info) |
-| **Cell** | Value | The actual single piece of data (e.g., `John`) |
+.csv files (source) --> .parquest files (staging area) --> database system/dwh system/big table (no sql database)
 
----
+if we are going to have data in file format --> it would be difficult to perform analytics on this data
+-->
 
-## 3. Key RDBMS Rules & Constraints
+in tabular format difficult analysis data   
 
-* **Primary Key**: A column with a **unique** value for every row (no duplicates, cannot be empty). Used to identify each record.
-* **NOT NULL**: A rule that says a column **cannot be left empty**.
-* **NULL**: Represents an **empty/missing** value.
-* **Normalization (1NF to 5NF)**: Step-by-step rules to organize tables, remove duplicate data, and keep things clean.
-* **Queries & Joins**: Rules that define how to write `SELECT` commands to retrieve and combine data from multiple tables.
+so by the top of the tabular format we can easily converting the report format in this report format easily convert the analysis dashboard 
 
----
+*********************************************************
+.file ----> Tabular format (Database/dwh/nosqldb) ---> report ---> Analysis (end users)
 
-## 4. Data vs Information
+Reporting tools 
+===========================
+Congno
+Tableua
+qqickview/powerbi --> All these reporting tools will work very  efficiently when we are giving data in tabular format (views)
 
-* **Data**: Raw, unorganized facts and figures without any context (e.g., `25`, `John`, `98.5`).
-* **Information**: Processed, structured data that makes sense and has meaning (e.g., `John scored 98.5% in the exam`).
 
-| Feature | Data | Information |
-| :--- | :--- | :--- |
-| **Meaning** | Raw facts with no meaning | Processed data with clear meaning |
-| **Dependency** | Independent (Input) | Dependent on data (Output) |
-| **Usage** | Cannot be used directly to make decisions | Used directly for decision-making |
-| **Example** | `100`, `95`, `80` | `Average score = 91.6%` |
+retrieve the data from the tables --> SQl queries 
+***************************************************
+In Real  time 
+1.Might be you need to build SQL queries from Scratch
+2.Migh be you need to change exiting sql queries based on business requirement ?
 
----
+*******************************************************************
 
-## 5. How Data Turns into Information
+Database? **
+Database is nothing collection of different database which we are using for the purpose of storing and maintaining the data.
 
-Data becomes useful information by processing it:
-* **Summarizing**: Combining large amounts of data into a short overview.
-* **Averaging / Calculating**: Doing math on numbers (e.g., calculating totals, averages, or percentages).
-* **Filtering & Selecting**: Picking only the specific rows and columns you care about.
-* **Visualizing**: Converting raw numbers into charts and graphs.
-* **Adding Context**: Giving labels and meaning (e.g., labeling `25` as `Age = 25`).
 
----
+type database objects?
+1.Tables [store the data]
+2.Views [ not store the data, virtual table]
+3.Triggers
+4.Stored procedures 
 
-## 6. Why Use SQL?
+------------------------------------------------------------
+What is table ? **
+  --> Table is thing but collecting of rows and columns
+----------------------------------------------------------------
 
-* **Easy to Learn**: Uses simple, English-like commands (e.g., `SELECT`, `WHERE`, `INSERT`, `DELETE`).
-* **Handles Huge Data**: Easily filters and searches millions of rows in seconds.
-* **Standard Language**: Works across almost all major database systems (MySQL, PostgreSQL, Oracle, SQL Server).
-* **Data Integrity**: Enforces strict rules so you don't save duplicate or broken data.
-* **Connects Tables (Joins)**: Allows you to combine related data across multiple tables smoothly.
+Row : it is a [record] --> which contain actual information
+   ---> This is instance of the object 
+
+object is kind of a real time value [person, customer, employ ,products
+----------------------------------------------------------------
+
+Column: it nothing but value of the row and characteristic or features of the object
+To know the meaning of the Rows --> we need to define the columns
+
+
+
+_____________________________________________________________________
+
+in the real time project who is going to create these tables ?
+1.DBA
+2.Cloud data engineer
+
+if you want to create the table what kind of input we need to get?
+
+schema --> structure --> 
+
+Table name 
+Column names
+Datatypes of the columns
+Datatype length of the columns 
+Constraints of the table
+
+
+From where we will get all above details ?
+In physical data model document (PDM document) --- > .pdf
+
+who will give the PDM document in real time 
+Data modeler
+
+
+what all are the prerequisite to create PDM document as a datamodeller?
+
+Understand business requirements 
+
+from where will get the business reequipments?
+
+in BRS document (Business Requirement specification document) --> .word /.pdf
+
+who will create BRS document ?
+BA --> Business analyst
+DA --> data analyst
+
+
+
+
+after the loading the data we ill get he DIS 
