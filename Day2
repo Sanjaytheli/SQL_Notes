@@ -33,6 +33,80 @@ what kind of operations  we can perform on the DATA :
   2.modifying the Data : UPDATE 
   3.Remove the Data:  DELETE
 
+what is the differeance between drop and delete ?
+whenever you are going remove the structure --> can we able to see the data in the table --> no 
+
+DROP   --> remove struture and data automatically 
+Delete --> it will remove only the data from the table, it wont remove on struture of the table
+
+DRL :
+ TO perform retrevel operation on the data from the table we table we will use DRL commands
+  Retrivel : extracting the data, reading the data  , pulling the data
+
+"SELECT"
+
+
+DCL :
+Create the tables --> i want to give access to this table for only few users
+ if you want to perform any kind of control operartion we can use DCL commands
+  --> control table access
+
+GRANT  - TO PROVIDE access on the table
+Revoke - TO remove the access on the table 
+
+who will control access in real time --> DBA (Database admininstrator 
+
+TCL :
+-----------
+
+insert ,upadate ,delete --> TO control the transaction we will use TCL Commands 
+
+AFter inserting or updating or deleting  --> you want to save the changes permanently  ---> COMMIT
+In database system if you want to retreve the changes --> ROLLbaCK 
+
+
+WROK document  -- undo -- ctrl + Z --> rollback
+WORK dOCUMENT  -- save -- ctrl + S --> commit 
+
+Initally in a table i am having 2 records --> 
+In a table I inserting 5 records -- 7 records 
+
+COMMIT ---> SAVE all the changes 
+
+REVERT above  5 records --> ROLLBACK --> NO (after perfoming the commit operation you cannot able to revert the changes )
+
+DELTE : to revert after the commit we user the delete to rollback ,  if we delete the data rollback command we can use 
+
+
+**********************************
+teradata    --->    DB system --> commit [auto commit ]
+teradata    --->   we won t have truncate command 
+
+TRUNCATE :
+-----------------
+For deleting the data we are going to use Truncate 
+Truncate will remove all the records from the table ..
+
+ 1. Differnt bettween the delete and TRUNCATE ?
+  once you delete the data --> we can revert it by using rollback 
+  once you are going to perform truncate operation on the data --> we can not retrving by using Rollback
+
+---> IF you want to remove all the record from with out haveing any knid of revert operation requirment --> TRUNCATE 
+
+---> From The table i want remove only few records --> delete
+
+
+Comparing to delete truncate will provide best performance 
+Limitation with truncate you can not able to perform revert operations
+
+*************************************************************************************
+
+----> different between the trucate and drop
+Drop --> removing structure (table and data complete removed)
+Truncate --> remove only the data (date removed but structure present in DB as is 
+
+
+
 
 
 
